@@ -41,17 +41,17 @@ $check = (new CaptchaGen)->Valid($captcha_result);
 (new CaptchaGen)->Clear();
 ```
 ## Tùy chỉnh ảnh gif
-### Methods
+### Tùy chỉnh
 
-* **getPhrase** - Get phrase
-* **setWidth** - Image width, px (Optional, default 150px)
-* **setHeight** - Image height, px  (Optional, default 40px)
-* **setTextColor** - Text color  (Optional)
-* **setBackgroundColor** - Background color  (Optional)
-* **setFont** - Font path  (Optional)
-* **setWindowWidth** - Window width, px  (Optional, default 75px)
-* **setPixelPerFrame** - Window shift per frame, px  (Optional, default 15px)
-* **setDelayBetweenFrames** - Time between frames, ms)  (Optional, default 20ms)
+* **getPhrase** - Lấy kết quả captcha
+* **setWidth** - Chiều rộng ảnh, px (Mặc định 150px)
+* **setHeight** - Chiều cao ảnh, px  (Mặc định 40px)
+* **setTextColor** - Màu chữ
+* **setBackgroundColor** - Màu nền
+* **setFont** - Đường dẫn tới file font
+* **setWindowWidth** - Chiều rộng cửa sổ, px (Mặc định 75px)
+* **setPixelPerFrame** - Chiều cao cửa sổ, px  (Mặc định 15px)
+* **setDelayBetweenFrames** - Thời gian giữa các khung hình, ms  (Mặc định 20ms)
 ```php
 $captcha = new CaptchaBuilder($check);
 $captcha
