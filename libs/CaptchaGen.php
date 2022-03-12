@@ -9,6 +9,14 @@ class CaptchaGen
     /**
      * @var string
      */
+    protected $strs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    /**
+     * @var string
+     */
+    protected $textToken = '';
+    /**
+     * @var string
+     */
     protected $phrase;
     /**
      * @var int
@@ -18,6 +26,17 @@ class CaptchaGen
      * @var int
      */
     protected $num2;
+
+    public function setToken(string $token = '') : self
+    {
+        $this->textToken = $token;
+        return $this;
+    }
+    public function setStr(string $str = '') : self
+    {
+        $this->str = $str;
+        return $this;
+    }
 
     public function __construct()
     {
@@ -39,10 +58,8 @@ class CaptchaGen
         return $min + $rnd;
     }
     protected function _randStr($length){
-        $token = "";
-        $codeAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        $codeAlphabet.= "abcdefghijklmnopqrstuvwxyz";
-        $codeAlphabet.= "0123456789";
+        $token = $this->textToken;
+        $codeAlphabet = $this->strs;
         $max = strlen($codeAlphabet); // edited
 
         for ($i=0; $i < $length; $i++) {
