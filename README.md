@@ -30,6 +30,16 @@ $captcha = new CaptchaBuilder($check);
 die($captcha->render());
 ```
 
+## Xác thực captcha
+```php
+$captcha_result = '';
+
+//Kiểm tra (true|false)
+$check = (new CaptchaGen)->Valid($captcha_result);
+
+//Xóa log captcha
+(new CaptchaGen)->Clear();
+```
 ## Tùy chỉnh ảnh gif
 ### Methods
 
