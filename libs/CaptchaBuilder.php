@@ -69,7 +69,7 @@ class CaptchaBuilder{
      */
     public function getPhrase(): string
     {
-        return $this->phrase;
+        return (new CaptchaGen())->Phrase();
     }
 
     /**
