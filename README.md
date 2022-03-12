@@ -40,6 +40,9 @@ $check = (new CaptchaGen)->Valid($captcha_result);
 //Xóa log captcha
 (new CaptchaGen)->Clear();
 ```
+## Tùy chỉnh captcha
+
+
 ## Tùy chỉnh ảnh gif
 ### Tùy chỉnh
 
