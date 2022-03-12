@@ -41,7 +41,22 @@ $check = (new CaptchaGen)->Valid($captcha_result);
 (new CaptchaGen)->Clear();
 ```
 ## Tùy chỉnh captcha
+### Tùy chỉnh
+* **Phrase** - Lấy kết quả captcha
+* **setStr** - Các ký tự có thể xuất hiện trong captcha chữ (Mặc định: ký tự chữ hóa, thường, số)
+* **setToken** - Ký tự bắt buộc có trong captcha chữ
+* **Auto** - Lấy kết quả captcha
 
+```php
+$Length = 6; // Độ dài văn vản
+$Min = 1; // Số bé nhất
+$Max = 13; // Số lớn nhất
+
+//Tạo captcha
+$check = (new CaptchaGen)->Auto($Length,$Min,$Max); // Dộ dài văn bản, số nhỏ nhất, số lớn nhất
+// $check = (new CaptchaGen)->Auto($Length); #Dộ dài văn bản
+// $check = (new CaptchaGen)->Calc($Min, $Max); #số nhỏ nhất, số lớn nhất
+```
 
 ## Tùy chỉnh ảnh gif
 ### Tùy chỉnh
